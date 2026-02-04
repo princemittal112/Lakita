@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Just Something I Wanted to Say</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fffaf7, #fceee8);
+      color: #444;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 80px 20px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #3a2f2f;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      color: #555;
+    }
+
+    .soft {
+      font-style: italic;
+      color: #777;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: #e6b8a2;
+      margin: 30px auto;
+      border-radius: 2px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: #e6b8a2;
+      color: #3a2f2f;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 400;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: #d9a48d;
+    }
+
+    footer {
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    audio {
+      margin-top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Section 1 -->
+  <section>
+    <h1>Hey.</h1>
+    <p class="soft">This isn’t an apology page.<br>
+    It’s not a demand either.</p>
+    <div class="divider"></div>
+    <p>
+      It’s just something I wanted to say calmly — once.
+    </p>
+    <a href="#understood" class="button">Take your time</a>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="understood">
+    <h2>What I Understood</h2>
+    <div class="divider"></div>
+    <p>I confused caring with holding on too tightly.</p>
+    <p>I reacted when I should have listened.</p>
+    <p>I spoke from frustration instead of empathy.</p>
+    <p>
+      And I understand now how that could make you feel unsafe —
+      even if that was never my intention.
+    </p>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <h2>What Never Changed</h2>
+    <div class="divider"></div>
+    <p>
+      Even on the days we were distant,<br>
+      the care didn’t disappear.
+    </p>
+    <p>
+      I still think of moments and imagine
+      how different they’d feel if you were there.
+    </p>
+    <p>
+      Some bonds don’t fade.<br>
+      They just wait quietly.
+    </p>
+
+    <!-- Optional Music
+    <audio controls>
+      <source src="admirin-you.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p class="soft">(Play only if you feel like it)</p>
+  </section> -->
+
+  <!-- Section 4 -->
+  <section>
+    <h2>If Life Ever Gave Us a Fresh Page</h2>
+    <div class="divider"></div>
+    <p>
+      Not a rewind.<br>
+      Not old arguments.
+    </p>
+    <p>
+      Just calmer conversations.<br>
+      More space. More Trust.
+    </p>
+    <p>
+      I will choose you over any other without fear —
+      not out of habit.
+    </p>
+    <p class="soft">
+      And maybe… raising that little penguin someday 🐧
+    </p>
+  </section>
+
+  <!-- Section 5 -->
+  <section>
+    <h2>No Pressure. Truly.</h2>
+    <div class="divider"></div>
+    <p>
+      You don’t owe me a reply.
+    </p>
+    <p>
+      You don’t owe me a decision.
+    </p>
+    <p>
+      I just wanted to be honest — gently.
+    </p>
+    <p>
+      If you ever feel like talking,<br>
+      I’ll listen.
+    </p>
+    <p class="soft">
+      And if not — I still wish you peace and happiness. I hope you think of giving US this last 1 chance
+    </p>
+  </section>
+
+  <footer>
+    Written with clarity, not urgency.<br>
+    — Your Prince
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
